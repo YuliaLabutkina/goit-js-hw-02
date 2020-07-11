@@ -14,7 +14,7 @@ const isLoginUnique = function(allLogins, login) {
 
 const addLogin = function(allLogins, login) {
 
-  if (isLoginValid(login) === false) {
+  if (!isLoginValid(login)) {
       return `Ошибка! Логин должен быть от 4 до 16 символов.`;
   };
   
