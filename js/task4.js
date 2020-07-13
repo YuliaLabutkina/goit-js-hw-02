@@ -1,17 +1,6 @@
 "use strict";
 
-const formatString = function(string) {
-    
-    const splitLetters = string.split('');
-
-    if (splitLetters.length < 40) {
-        return string;
-    } else {
-       splitLetters.length = 40;
-       const newLine = splitLetters.splice(-3, 3, '.', '.', '.');
-       return splitLetters.join('');
-    }
-  };
+const formatString = (string) => (string.split('').length > 40 ? string.slice(0, 40).concat('...') : string);
   
   console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
   // вернется оригинальная строка

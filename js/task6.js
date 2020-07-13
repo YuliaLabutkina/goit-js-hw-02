@@ -5,17 +5,15 @@ const numbers = [];
 let total = 0;
 
 do {
-   input = prompt('Введите число!');
+    input = prompt('Введите число!');
 
-   if (input !== null) {
+    if (!! input && !Number.isNaN(+input)) {
+        numbers.push(input);
 
-    if (Number.isNaN(+input)) {
+    } else if (Number.isNaN(+input)) {
         alert('Было введено не число! Введите число пожалуйста!');
-        continue;
-    };
-
-    numbers.push(input);
-   };
+        
+    }
 
 } while (input !== null);
 
